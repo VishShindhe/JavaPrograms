@@ -1,0 +1,35 @@
+//Synchronised keyword is used in the method ie shared by multiple threads and is used at same time. THis is called Race Condition
+//Using synchronised keyword the method will be allowed to used by only one thread at a time.
+//Also make sure u ask the main method to wait for the threads to complete and join the main thread before printing count by using join()
+// **** TRY BELOW PROGRAM WITHOUT USING SYNCHRONISED KEYWORD & OBSERVE THE OUTPUT ****
+
+class  Counter{
+    int count;
+    public synchronized void increment(){
+        count++;
+    }
+}
+public class RunnableUsingSynchronized {
+    public static void main(String[] args) throws InterruptedException {
+        Counter c = new Counter();
+        Runnable obj1 = () ->
+        {
+            for(int i=1; i<=1000; i++)
+                c.increment();
+        };
+        Runnable obj2 = () ->
+        {
+            for(int i=1; i<=1000; i++)
+                c.increment();
+        };
+        Thread t1 = new Thread(obj1);
+        Thread t2 = new Thread(obj2);
+        t1.start();
+        t2.start();
+
+        t1.join();
+        t2.join();
+
+        System.out.println(c.count);
+    }
+}
