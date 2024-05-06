@@ -1,3 +1,4 @@
+package com.vish.Others;
 public class RunnableUsingLambdaDemo {
     public static void main(String[] args) {
         Runnable obj1 = () ->

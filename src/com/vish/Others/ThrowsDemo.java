@@ -1,3 +1,4 @@
+package com.vish.Others;
 class Throws
 {
     public void show() throws ClassNotFoundException{

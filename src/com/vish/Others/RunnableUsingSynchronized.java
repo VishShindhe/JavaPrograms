@@ -1,3 +1,4 @@
+package com.vish.Others;
 //Synchronised keyword is used in the method ie shared by multiple threads and is used at same time. THis is called Race Condition
 //Using synchronised keyword the method will be allowed to used by only one thread at a time.
 //Also make sure u ask the main method to wait for the threads to complete and join the main thread before printing count by using join()

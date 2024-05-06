@@ -1,4 +1,5 @@
-class Thread1 extends Thread
+package com.vish.Others;
+class RunnableClass1 implements Runnable
 {
     public void run(){
         for(int i=1; i<100; i++) {
@@ -11,7 +12,7 @@ class Thread1 extends Thread
         }
     }
 }
-class Thread2 extends Thread
+class RunnableClass2 implements Runnable
 {
     public void run(){
         for(int i=1; i<100; i++) {
@@ -24,11 +25,13 @@ class Thread2 extends Thread
         }
     }
 }
-public class ThreadDemo {
+public class RunnableDemo {
     public static void main(String[] args) {
-        Thread1 obj1 = new Thread1();
-        Thread2 obj2 = new Thread2();
-        obj1.start();
-        obj2.start();
+        Runnable obj1 = new RunnableClass1();
+        Runnable obj2 = new RunnableClass2();
+        Thread t1 = new Thread(obj1);
+        Thread t2 = new Thread(obj2);
+        t1.start();
+        t2.start();
     }
 }

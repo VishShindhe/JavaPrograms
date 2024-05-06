@@ -1,3 +1,4 @@
+package com.vish.Others;
 interface Animal {
     void makeSound(); // Method signature
 }

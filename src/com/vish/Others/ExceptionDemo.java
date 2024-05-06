@@ -1,3 +1,4 @@
+package com.vish.Others;
 //Creating a custom exception
 class NewException extends Exception{
     public NewException(String message){

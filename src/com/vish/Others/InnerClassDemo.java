@@ -1,3 +1,4 @@
+package com.vish.Others;
  class OuterClass{
     public void show(){
         System.out.println("In show");

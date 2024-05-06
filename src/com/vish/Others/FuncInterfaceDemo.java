@@ -1,3 +1,4 @@
+package com.vish.Others;
 @FunctionalInterface
 interface MyFunctionalInterface {
     //void show(); //1st test
