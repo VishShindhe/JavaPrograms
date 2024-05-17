@@ -25,8 +25,8 @@ public class ForEachDemo {
         //Consumer<Integer> con = n -> System.out.println(n); //Condensed code for above
 
         //Since con can be replaced  RHS part
-        nums.forEach(n -> System.out.println(n));
-
+        nums.forEach(n -> System.out.println(n)); //OR this can be written as below
+        nums.forEach(System.out::println);
 
     }
 }
