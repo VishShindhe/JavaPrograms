@@ -7,6 +7,8 @@ public class AnagramHR {
         if(a.length() != b.length())
             return false;
         int indexOfChar;
+        a= a.toUpperCase();
+        b= b.toUpperCase();
         for (int i = 0; i<a.length(); i++) {
             indexOfChar = b.indexOf(a.charAt(i));
             if (indexOfChar == -1)
